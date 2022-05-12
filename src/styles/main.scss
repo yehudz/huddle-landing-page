@@ -1,0 +1,100 @@
+:root {
+  --primary-color: #684BB1;
+  --secondary-color: #E880E8;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('images/bg-desktop.svg');
+  background-color: var(--primary-color);
+  .innerWrapper {
+    padding: 4% 5%;
+    .logo {
+      height: 66px;
+      width: 280px;
+      background-image: url('images/logo.svg');
+      background-repeat: no-repeat;
+      background-size: 210px;
+    }
+    .contentContainer {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      width: 100%;
+      margin-top: 60px;
+      .heroImage {
+        flex: 1;
+        background-image: url('images/illustration-mockups.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 500px;
+      }
+      .content {
+        flex: .7;
+        padding-top: 3%;
+        .header {
+          font-size: 40px;
+          font-weight: 600;
+        }
+        p {
+          padding-right: 8%;
+        }
+        .button {
+          text-align: center;
+          line-height: 56px;
+          height: 56px;
+          width: 200px;
+          background-color: #fff;
+          color: var(--primary-color);
+          border-radius: 56px;
+          box-shadow: 0 5px 10px 0px rgba(0,0,0,.3);
+          transition: all ease 250ms;
+          cursor: pointer;
+          &:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+          }
+        }
+      }
+    }
+    .logos {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      float: right;
+      height: 40px;
+      width: 152px;
+      .icon {
+        height: 40px;
+        width: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        filter: invert(99%) sepia(0%) saturate(7496%) hue-rotate(216deg) brightness(103%) contrast(102%);
+        transition: all ease 250ms;
+        &:hover {
+          filter: invert(59%) sepia(97%) saturate(429%) hue-rotate(256deg) brightness(103%) contrast(82%);
+        }
+      }
+      .icon.fb {
+        background-image: url('images/fb_logo.png');
+      }
+      .icon.tw {
+        background-image: url('images/tw_logo.png');
+      }
+      .icon.in {
+        position: relative;
+        display: block;
+        background-image: url('images/in_logo.png');
+      }
+    }
+  }
+}
